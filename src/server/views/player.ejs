@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <% include head.ejs %>
+    <body>
+        <div id="container">
+            <header>
+                Collaborative music player
+            </header>
+            <div id="page">
+                <h1>Search for an Artist</h1>
+                <form id="search-form" class="w600 centered big">
+                    <fieldset>
+                        <div class="input text wp80 floatL">
+                            <input type="text" id="query" value="" class="wp100" />
+                        </div>
+                        <div class="input wp20 floatL">
+                            <input type="submit" id="search" class="submit wp100" value="Search" />
+                        </div>
+                    </fieldset>
+                </form>
+                <div id="results"></div>
+
+            </div>
+        </div>
+        <script type="text/javascript">
+            playerController()
+        </script>
+    </body>
+</html>

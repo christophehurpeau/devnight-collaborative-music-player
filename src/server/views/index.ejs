@@ -2,6 +2,37 @@
 <html>
     <% include head.ejs %>
     <body>
-        body
+        <div id="container">
+            <header>
+                Collaborative music player
+            </header>
+            <div id="page">
+                <h1>Create / Join a room</h1>
+                <div class="content w840 clearfix" style="margin:20px auto 0">
+                    <div class="floatL w400 mr20">
+                        <h3>Login</h3>
+                        <a href="/login" class="button">Log in with Spotify</a>
+                    </div>
+                    <div class="floatL w400 ml20">
+                        <h3>Join a room</h3>
+                        <form novalidate="novalidate" action="/join" method="post" id="formJoin" class="big">
+                            <fieldset>
+                                <div class="input text">
+                                    <label for="UserFirst_name">Name</label>
+                                    <input id="UserFirst_name" name="name" required="required" maxlength="100" size="40" class="wp100" type="text">
+                                </div>
+                                <div class="input text">
+                                    <label for="UserFirst_name">Room code</label>
+                                    <input id="UserFirst_name" name="room_code" required="required" minlength="4" size="40" class="wp100" type="text">
+                                </div>
+                                <div class="center">
+                                    <input value="Join" class="submit" type="submit">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

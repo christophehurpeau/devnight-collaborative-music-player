@@ -1,6 +1,8 @@
 {
-  "name": YOUR_PACKAGE_NAME,
+  "name": "collaborative-music-player",
   "version": "0.0.1",
   "dependencies": {
+    "springbok-styl": "git@github.com:christophehurpeau/springbok-styl.git",
+    "jquery": "~2.1.1"
   }
 }

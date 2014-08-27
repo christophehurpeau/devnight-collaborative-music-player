@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var pkg = require('./package.json');
 require('springbokjs-base/gulptask.js')(pkg, gulp, {
+    stylus: true,
+
     src: {
         css: [
             // here put css files from bower or node_modules or other assets,
@@ -10,6 +12,7 @@ require('springbokjs-base/gulptask.js')(pkg, gulp, {
             // here put js files from bower or node_modules or other assets,
             // included before files from src/browser/js/ folder.
             'node_modules/springbokjs-shim/init.js',
+            'public/vendor/jquery/dist/jquery.min.js',
             //'node_modules/ejs/ejs.min.js'
         ]
     },
@@ -19,6 +22,14 @@ require('springbokjs-base/gulptask.js')(pkg, gulp, {
     jshintServerOptions: {
         "predef": [ "S" ]
     },
+
+
+    paths: {
+        bowerPath: 'public/vendor',
+        browser: {
+            mainstyle: 'main.styl',
+        }
+    }
 });
 
 
